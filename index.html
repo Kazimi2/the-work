@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国革命历史时间轴 (1840-1949)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="site-header">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🇨🇳</span>
+                中国革命历史
+            </div>
+            <nav class="main-nav">
+                <a href="#timeline">时间轴</a>
+                <a href="#knowledge">知识图谱</a>
+                <a href="#quiz">趣味测验</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">中国革命历史时间轴</h1>
+            <p class="hero-subtitle">1840年 - 1949年 · 探索百年革命历程</p>
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="scrollToSection('timeline')">开始探索</button>
+                <button class="btn-secondary" onclick="scrollToSection('quiz')">趣味测验</button>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- 时间轴区域 -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">革命历程时间轴</h2>
+            <p class="section-subtitle">从鸦片战争到新中国成立的重要历史节点</p>
+            
+            <!-- 时间筛选器 -->
+            <div class="timeline-filter">
+                <button class="filter-btn active" data-period="all">全部时期</button>
+                <button class="filter-btn" data-period="early">早期革命</button>
+                <button class="filter-btn" data-period="republic">民国时期</button>
+                <button class="filter-btn" data-period="war">抗日战争</button>
+                <button class="filter-btn" data-period="civil">解放战争</button>
+            </div>
+
+            <!-- 时间轴 -->
+            <div class="timeline">
+                <!-- 鸦片战争 -->
+                <div class="timeline-item" data-period="early">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1840-1842</div>
+                        <h3 class="timeline-title">鸦片战争</h3>
+                        <div class="timeline-description">
+                            <p>中国近代史的开端，标志着中国开始沦为半殖民地半封建社会。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1840年6月</strong> - 英国舰队封锁珠江口，鸦片战争爆发</li>
+                                        <li><strong>1841年1月</strong> - 英军攻占香港岛</li>
+                                        <li><strong>1841年5月</strong> - 广州三元里人民抗英斗争</li>
+                                        <li><strong>1842年8月29日</strong> - 签订《南京条约》</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">林则徐</span>
+                                        <span class="figure-tag">道光帝</span>
+                                        <span class="figure-tag">琦善</span>
+                                        <span class="figure-tag">关天培</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>签订《南京条约》，中国开始丧失主权</li>
+                                        <li>开启了中国近代化的艰难历程</li>
+                                        <li>激发了民族意识的觉醒</li>
+                                        <li>中国社会性质发生根本变化</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 太平天国运动 -->
+                <div class="timeline-item" data-period="early">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1851-1864</div>
+                        <h3 class="timeline-title">太平天国运动</h3>
+                        <div class="timeline-description">
+                            <p>中国历史上规模最大的农民起义，沉重打击了清王朝的统治。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1851年1月11日</strong> - 金田起义，太平天国建立</li>
+                                        <li><strong>1853年3月</strong> - 攻占南京，改名天京</li>
+                                        <li><strong>1856年</strong> - 天京事变，太平天国内讧</li>
+                                        <li><strong>1864年7月</strong> - 天京陷落，太平天国失败</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">洪秀全</span>
+                                        <span class="figure-tag">杨秀清</span>
+                                        <span class="figure-tag">石达开</span>
+                                        <span class="figure-tag">曾国藩</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>动摇了清王朝的统治基础</li>
+                                        <li>促进了地方汉族官僚势力的崛起</li>
+                                        <li>客观上为洋务运动创造了条件</li>
+                                        <li>推动了中国近代化的进程</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 洋务运动 -->
+                <div class="timeline-item" data-period="early">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1861-1895</div>
+                        <h3 class="timeline-title">洋务运动</h3>
+                        <div class="timeline-description">
+                            <p>晚清时期的自强运动，是中国近代化的开端。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要成就</h4>
+                                    <ul>
+                                        <li><strong>1861年</strong> - 设立总理各国事务衙门</li>
+                                        <li><strong>1865年</strong> - 创办江南制造总局</li>
+                                        <li><strong>1872年</strong> - 派遣第一批幼童赴美留学</li>
+                                        <li><strong>1888年</strong> - 建立北洋水师</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">曾国藩</span>
+                                        <span class="figure-tag">李鸿章</span>
+                                        <span class="figure-tag">左宗棠</span>
+                                        <span class="figure-tag">张之洞</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>引进了西方先进技术和设备</li>
+                                        <li>培养了中国第一批近代化人才</li>
+                                        <li>客观上促进了民族资本主义的发展</li>
+                                        <li>为后来的维新变法奠定了基础</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 甲午战争 -->
+                <div class="timeline-item" data-period="early">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1894-1895</div>
+                        <h3 class="timeline-title">甲午战争</h3>
+                        <div class="timeline-description">
+                            <p>中日之间的重要战争，标志着洋务运动的失败。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要战役</h4>
+                                    <ul>
+                                        <li><strong>1894年7月25日</strong> - 丰岛海战，战争爆发</li>
+                                        <li><strong>1894年9月17日</strong> - 黄海海战，北洋水师损失惨重</li>
+                                        <li><strong>1895年2月</strong> - 威海卫战役，北洋水师全军覆没</li>
+                                        <li><strong>1895年4月17日</strong> - 签订《马关条约》</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">李鸿章</span>
+                                        <span class="figure-tag">丁汝昌</span>
+                                        <span class="figure-tag">邓世昌</span>
+                                        <span class="figure-tag">刘步蟾</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>签订《马关条约》，中国国际地位进一步下降</li>
+                                        <li>刺激了列强瓜分中国的狂潮</li>
+                                        <li>促进了维新变法思想的传播</li>
+                                        <li>标志着洋务运动的彻底失败</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 戊戌变法 -->
+                <div class="timeline-item" data-period="early">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1898</div>
+                        <h3 class="timeline-title">戊戌变法</h3>
+                        <div class="timeline-description">
+                            <p>资产阶级改良派发起的政治改革运动，又称"百日维新"。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1898年6月11日</strong> - 光绪帝颁布《明定国是诏》</li>
+                                        <li><strong>1898年6月-9月</strong> - 颁布一系列变法诏书</li>
+                                        <li><strong>1898年9月21日</strong> - 慈禧太后发动政变，变法失败</li>
+                                        <li><strong>1898年9月28日</strong> - "戊戌六君子"就义</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">康有为</span>
+                                        <span class="figure-tag">梁启超</span>
+                                        <span class="figure-tag">谭嗣同</span>
+                                        <span class="figure-tag">光绪帝</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>是中国近代第一次思想解放运动</li>
+                                        <li>促进了资产阶级民主思想的传播</li>
+                                        <li>为后来的辛亥革命准备了条件</li>
+                                        <li>显示了改良主义道路在中国的失败</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 辛亥革命 -->
+                <div class="timeline-item" data-period="republic">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1911</div>
+                        <h3 class="timeline-title">辛亥革命</h3>
+                        <div class="timeline-description">
+                            <p>推翻了中国两千多年的封建帝制，建立了亚洲第一个共和国。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1911年10月10日</strong> - 武昌起义爆发</li>
+                                        <li><strong>1911年10月-11月</strong> - 各省纷纷宣布独立</li>
+                                        <li><strong>1911年12月29日</strong> - 孙中山当选临时大总统</li>
+                                        <li><strong>1912年1月1日</strong> - 中华民国临时政府成立</li>
+                                        <li><strong>1912年2月12日</strong> - 清帝溥仪退位</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">孙中山</span>
+                                        <span class="figure-tag">黄兴</span>
+                                        <span class="figure-tag">黎元洪</span>
+                                        <span class="figure-tag">宋教仁</span>
+                                        <span class="figure-tag">袁世凯</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>结束封建帝制，建立中华民国</li>
+                                        <li>推动民主共和思想传播</li>
+                                        <li>为后续革命奠定基础</li>
+                                        <li>开启了中国政治现代化的进程</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 护国运动 -->
+                <div class="timeline-item" data-period="republic">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1915-1916</div>
+                        <h3 class="timeline-title">护国运动</h3>
+                        <div class="timeline-description">
+                            <p>反对袁世凯称帝的全国性运动，维护了共和制度。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1915年12月12日</strong> - 袁世凯宣布称帝</li>
+                                        <li><strong>1915年12月25日</strong> - 蔡锷在云南宣布独立</li>
+                                        <li><strong>1916年3月22日</strong> - 袁世凯取消帝制</li>
+                                        <li><strong>1916年6月6日</strong> - 袁世凯病逝</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">蔡锷</span>
+                                        <span class="figure-tag">梁启超</span>
+                                        <span class="figure-tag">唐继尧</span>
+                                        <span class="figure-tag">李烈钧</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>粉碎了袁世凯的帝制复辟</li>
+                                        <li>维护了民主共和制度</li>
+                                        <li>促进了民主思想的传播</li>
+                                        <li>加剧了军阀割据的局面</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 护法运动 -->
+                <div class="timeline-item" data-period="republic">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1917-1922</div>
+                        <h3 class="timeline-title">护法运动</h3>
+                        <div class="timeline-description">
+                            <p>孙中山为维护《临时约法》和国会而发起的运动。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1917年7月</strong> - 张勋复辟失败</li>
+                                        <li><strong>1917年8月</strong> - 孙中山在广州成立护法军政府</li>
+                                        <li><strong>1918年5月</strong> - 孙中山辞去大元帅职务</li>
+                                        <li><strong>1920年</strong> - 第二次护法运动开始</li>
+                                        <li><strong>1922年6月</strong> - 陈炯明叛变，护法运动失败</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">孙中山</span>
+                                        <span class="figure-tag">陆荣廷</span>
+                                        <span class="figure-tag">唐继尧</span>
+                                        <span class="figure-tag">陈炯明</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>维护了民主共和的旗帜</li>
+                                        <li>促进了南方革命力量的发展</li>
+                                        <li>为后来的国民革命奠定了基础</li>
+                                        <li>暴露了军阀势力的本质</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 五四运动 -->
+                <div class="timeline-item" data-period="republic">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1919</div>
+                        <h3 class="timeline-title">五四运动</h3>
+                        <div class="timeline-description">
+                            <p>中国新民主主义革命的开端，标志着中国工人阶级登上政治舞台。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1919年1月18日</strong> - 巴黎和会召开，中国外交失败</li>
+                                        <li><strong>1919年5月4日</strong> - 北京学生游行示威，火烧赵家楼</li>
+                                        <li><strong>1919年5月19日</strong> - 北京学生总罢课</li>
+                                        <li><strong>1919年6月3日</strong> - 上海工人罢工，运动中心转移到上海</li>
+                                        <li><strong>1919年6月10日</strong> - 北洋政府罢免曹汝霖、章宗祥、陆宗舆</li>
+                                        <li><strong>1919年6月28日</strong> - 中国代表拒绝在《凡尔赛和约》上签字</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">陈独秀</span>
+                                        <span class="figure-tag">李大钊</span>
+                                        <span class="figure-tag">胡适</span>
+                                        <span class="figure-tag">傅斯年</span>
+                                        <span class="figure-tag">罗家伦</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>促进了马克思主义在中国的传播</li>
+                                        <li>推动了中国共产党的成立</li>
+                                        <li>开启了中国现代思想解放运动</li>
+                                        <li>标志着中国工人阶级登上政治舞台</li>
+                                        <li>为中国新民主主义革命奠定了基础</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 中国共产党成立 -->
+                <div class="timeline-item" data-period="republic">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1921</div>
+                        <h3 class="timeline-title">中国共产党成立</h3>
+                        <div class="timeline-description">
+                            <p>中国历史上开天辟地的大事变，中国革命的面貌从此焕然一新。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1921年7月23日</strong> - 中共一大在上海法租界望志路106号开幕</li>
+                                        <li><strong>1921年7月30日</strong> - 会议因法租界巡捕搜查而中断</li>
+                                        <li><strong>1921年7月31日</strong> - 会议转移到浙江嘉兴南湖游船上继续</li>
+                                        <li><strong>1921年8月3日</strong> - 中共一大闭幕，通过《中国共产党第一个纲领》</li>
+                                        <li><strong>1921年8月</strong> - 成立中国劳动组合书记部，领导工人运动</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">毛泽东</span>
+                                        <span class="figure-tag">董必武</span>
+                                        <span class="figure-tag">陈独秀</span>
+                                        <span class="figure-tag">李达</span>
+                                        <span class="figure-tag">张国焘</span>
+                                        <span class="figure-tag">刘仁静</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>确立了中国革命的正确方向</li>
+                                        <li>为中国革命提供了坚强的领导核心</li>
+                                        <li>开启了中华民族伟大复兴的新征程</li>
+                                        <li>标志着中国工人阶级的先锋队诞生</li>
+                                        <li>为中国人民的解放事业指明了方向</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 南昌起义 -->
+                <div class="timeline-item" data-period="republic">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1927</div>
+                        <h3 class="timeline-title">南昌起义</h3>
+                        <div class="timeline-description">
+                            <p>打响了武装反抗国民党反动派的第一枪，标志着中国共产党独立领导革命战争和创建革命军队的开始。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件</h4>
+                                    <ul>
+                                        <li><strong>1927年7月12日</strong> - 中共中央改组，成立临时政治局常委会</li>
+                                        <li><strong>1927年7月15日</strong> - 汪精卫在武汉"分共"，大革命失败</li>
+                                        <li><strong>1927年7月下旬</strong> - 中共中央决定在南昌举行武装起义</li>
+                                        <li><strong>1927年7月27日</strong> - 周恩来抵达南昌，成立前敌委员会</li>
+                                        <li><strong>1927年8月1日凌晨2时</strong> - 南昌起义爆发，起义军向国民党军发起进攻</li>
+                                        <li><strong>1927年8月1日上午</strong> - 起义军占领南昌城，成立革命委员会</li>
+                                        <li><strong>1927年8月3日-5日</strong> - 起义军撤离南昌，南下广东</li>
+                                        <li><strong>1927年9月下旬-10月初</strong> - 起义军在潮汕地区失败</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">周恩来</span>
+                                        <span class="figure-tag">贺龙</span>
+                                        <span class="figure-tag">叶挺</span>
+                                        <span class="figure-tag">朱德</span>
+                                        <span class="figure-tag">刘伯承</span>
+                                        <span class="figure-tag">谭平山</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>创建了中国共产党领导的人民军队</li>
+                                        <li>开启了中国革命武装斗争的新阶段</li>
+                                        <li>为建立革命根据地奠定了基础</li>
+                                        <li>8月1日被定为中国人民解放军建军节</li>
+                                        <li>标志着中国共产党独立领导革命战争的开始</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 长征 -->
+                <div class="timeline-item" data-period="republic">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1934-1936</div>
+                        <h3 class="timeline-title">长征</h3>
+                        <div class="timeline-description">
+                            <p>中国工农红军进行的战略转移，是人类历史上的伟大奇迹。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件与战役</h4>
+                                    <ul>
+                                        <li><strong>1934年10月</strong> - 中央红军从瑞金出发开始长征</li>
+                                        <li><strong>1934年11月-12月</strong> - 突破国民党四道封锁线，湘江战役</li>
+                                        <li><strong>1935年1月15-17日</strong> - 遵义会议，确立毛泽东领导地位</li>
+                                        <li><strong>1935年1月-3月</strong> - 四渡赤水，摆脱国民党围追堵截</li>
+                                        <li><strong>1935年5月</strong> - 巧渡金沙江，强渡大渡河，飞夺泸定桥</li>
+                                        <li><strong>1935年6月</strong> - 翻越夹金山，红一、四方面军会师</li>
+                                        <li><strong>1935年8月</strong> - 过草地，毛儿盖会议</li>
+                                        <li><strong>1935年9月</strong> - 突破腊子口，翻越六盘山</li>
+                                        <li><strong>1935年10月19日</strong> - 中央红军到达陕北吴起镇</li>
+                                        <li><strong>1936年10月</strong> - 红一、二、四方面军在甘肃会宁会师</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">毛泽东</span>
+                                        <span class="figure-tag">周恩来</span>
+                                        <span class="figure-tag">朱德</span>
+                                        <span class="figure-tag">彭德怀</span>
+                                        <span class="figure-tag">刘伯承</span>
+                                        <span class="figure-tag">林彪</span>
+                                        <span class="figure-tag">贺龙</span>
+                                        <span class="figure-tag">徐向前</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史影响</h4>
+                                    <ul>
+                                        <li>保存了中国革命的有生力量</li>
+                                        <li>确立了毛泽东在党内的领导地位</li>
+                                        <li>为中国革命胜利奠定了基础</li>
+                                        <li>传播了革命思想，扩大了党的影响</li>
+                                        <li>锻炼和培养了大批革命骨干</li>
+                                        <li>创造了人类历史上的伟大奇迹</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 抗日战争 - 细化时间轴 -->
+                <div class="timeline-item" data-period="war">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1931-1937</div>
+                        <h3 class="timeline-title">局部抗战时期</h3>
+                        <div class="timeline-description">
+                            <p>从九一八事变到七七事变，中国人民开始了长达六年的局部抗战，东北抗日联军、十九路军等爱国武装力量英勇抵抗日本侵略。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件与战役</h4>
+                                    <ul>
+                                        <li><strong>1931年9月18日</strong> - 九一八事变，日本关东军突袭沈阳北大营</li>
+                                        <li><strong>1931年9月19日</strong> - 日军占领沈阳，随后迅速占领东北主要城市</li>
+                                        <li><strong>1932年1月28日</strong> - 一二八事变，十九路军在上海英勇抵抗日军</li>
+                                        <li><strong>1932年2月5日</strong> - 哈尔滨沦陷，东北全境被日军占领</li>
+                                        <li><strong>1932年3月1日</strong> - 日本扶植溥仪建立伪满洲国</li>
+                                        <li><strong>1933年1月-5月</strong> - 长城抗战，中国军队在喜峰口、古北口等地阻击日军</li>
+                                        <li><strong>1933年5月31日</strong> - 签订《塘沽协定》，华北门户洞开</li>
+                                        <li><strong>1935年</strong> - 华北事变，日本策动"华北自治运动"</li>
+                                        <li><strong>1935年12月9日</strong> - 一二九运动，北平学生抗日救亡示威游行</li>
+                                        <li><strong>1936年12月12日</strong> - 西安事变，张学良、杨虎城兵谏蒋介石</li>
+                                        <li><strong>1937年2月-9月</strong> - 国共谈判，抗日民族统一战线初步形成</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">张学良</span>
+                                        <span class="figure-tag">杨虎城</span>
+                                        <span class="figure-tag">蔡廷锴</span>
+                                        <span class="figure-tag">蒋光鼐</span>
+                                        <span class="figure-tag">马占山</span>
+                                        <span class="figure-tag">杨靖宇</span>
+                                        <span class="figure-tag">赵尚志</span>
+                                        <span class="figure-tag">宋哲元</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>中国人民开始了有组织的武装抗日斗争</li>
+                                        <li>东北抗日联军在极端困难条件下坚持抗战</li>
+                                        <li>促进了全国抗日救亡运动的高涨</li>
+                                        <li>为全面抗战积累了经验和力量</li>
+                                        <li>西安事变成为时局转换的枢纽</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-period="war">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1937-1938</div>
+                        <h3 class="timeline-title">全面抗战爆发与战略防御</h3>
+                        <div class="timeline-description">
+                            <p>七七事变标志着全面抗战开始，中国军队在正面战场顽强抵抗，粉碎了日军"速战速决"的战略企图。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要战役与事件</h4>
+                                    <ul>
+                                        <li><strong>1937年7月7日</strong> - 卢沟桥事变，日军炮轰宛平城，全面抗战爆发</li>
+                                        <li><strong>1937年7月17日</strong> - 蒋介石发表庐山谈话，表明抗战决心</li>
+                                        <li><strong>1937年8月13日-11月12日</strong> - 淞沪会战，中国军队投入70余万兵力</li>
+                                        <li><strong>1937年8月22日</strong> - 红军改编为八路军，开赴抗日前线</li>
+                                        <li><strong>1937年9月25日</strong> - 平型关大捷，八路军115师伏击日军板垣师团</li>
+                                        <li><strong>1937年9月-11月</strong> - 太原会战，忻口战役、娘子关战役</li>
+                                        <li><strong>1937年11月20日</strong> - 国民政府宣布迁都重庆</li>
+                                        <li><strong>1937年12月1日-13日</strong> - 南京保卫战，唐生智指挥守城</li>
+                                        <li><strong>1937年12月13日</strong> - 南京沦陷，日军制造南京大屠杀</li>
+                                        <li><strong>1938年3月14日-4月6日</strong> - 台儿庄大捷，歼敌2万余人</li>
+                                        <li><strong>1938年5月19日</strong> - 徐州会战结束，中国军队成功突围</li>
+                                        <li><strong>1938年6月9日</strong> - 花园口决堤，迟滞日军进攻</li>
+                                        <li><strong>1938年6月11日-10月27日</strong> - 武汉会战，抗战进入相持阶段</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">蒋介石</span>
+                                        <span class="figure-tag">李宗仁</span>
+                                        <span class="figure-tag">张自忠</span>
+                                        <span class="figure-tag">林彪</span>
+                                        <span class="figure-tag">佟麟阁</span>
+                                        <span class="figure-tag">赵登禹</span>
+                                        <span class="figure-tag">谢晋元</span>
+                                        <span class="figure-tag">郝梦龄</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>粉碎了日军"三个月灭亡中国"的狂妄计划</li>
+                                        <li>为沿海工业内迁赢得了宝贵时间</li>
+                                        <li>促进了抗日民族统一战线的巩固</li>
+                                        <li>中国军队以巨大牺牲换取了战略相持</li>
+                                        <li>展现了中华民族不屈不挠的抗战精神</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-period="war">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1939-1943</div>
+                        <h3 class="timeline-title">战略相持阶段</h3>
+                        <div class="timeline-description">
+                            <p>敌后战场成为抗战主战场，八路军、新四军在极其艰苦的条件下坚持抗战，正面战场继续牵制日军主力。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要战役与事件</h4>
+                                    <ul>
+                                        <li><strong>1939年9月14日-10月10日</strong> - 第一次长沙会战，粉碎日军占领长沙企图</li>
+                                        <li><strong>1939年11月-1940年3月</strong> - 冬季攻势，中国军队在各大战场主动出击</li>
+                                        <li><strong>1940年3月30日</strong> - 汪精卫在南京成立伪国民政府</li>
+                                        <li><strong>1940年5月-6月</strong> - 枣宜会战，张自忠将军壮烈殉国</li>
+                                        <li><strong>1940年8月20日-12月5日</strong> - 百团大战，八路军出动105个团，毙伤日伪军2.5万余人</li>
+                                        <li><strong>1941年1月4日-14日</strong> - 皖南事变，新四军军部遭国民党军围攻</li>
+                                        <li><strong>1941年9月-10月</strong> - 第二次长沙会战，中国军队击退日军进攻</li>
+                                        <li><strong>1941年12月7日</strong> - 太平洋战争爆发，中国正式对日、德、意宣战</li>
+                                        <li><strong>1941年12月23日-1942年1月15日</strong> - 第三次长沙会战，取得重大胜利</li>
+                                        <li><strong>1942年1月-5月</strong> - 中国远征军第一次入缅作战，戴安澜将军殉国</li>
+                                        <li><strong>1942年5月-1945年1月</strong> - 浙赣战役，日军实施细菌战</li>
+                                        <li><strong>1943年5月-6月</strong> - 鄂西会战，石牌要塞保卫战</li>
+                                        <li><strong>1943年10月-12月</strong> - 常德会战，"虎贲"部队坚守常德</li>
+                                        <li><strong>1943年11月</strong> - 开罗会议，中美英三国首脑会晤</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">彭德怀</span>
+                                        <span class="figure-tag">左权</span>
+                                        <span class="figure-tag">张自忠</span>
+                                        <span class="figure-tag">戴安澜</span>
+                                        <span class="figure-tag">卫立煌</span>
+                                        <span class="figure-tag">薛岳</span>
+                                        <span class="figure-tag">陈纳德</span>
+                                        <span class="figure-tag">史迪威</span>
+                                        <span class="figure-tag">胡琏</span>
+                                        <span class="figure-tag">余程万</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>敌后战场成为抗战主战场，八路军、新四军在极其困难条件下坚持抗战</li>
+                                        <li>正面战场继续牵制日军主力，为世界反法西斯战争作出重要贡献</li>
+                                        <li>中国远征军入缅作战，开辟境外战场，支援盟军作战</li>
+                                        <li>百团大战沉重打击了日军的"囚笼政策"，提高了八路军的威望</li>
+                                        <li>中国成为世界反法西斯战争的重要力量，国际地位显著提升</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-period="war">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1944-1945</div>
+                        <h3 class="timeline-title">战略反攻与胜利</h3>
+                        <div class="timeline-description">
+                            <p>中国军队在正面战场和敌后战场同时展开反攻，最终取得抗战全面胜利，中国人民迎来了民族解放的伟大时刻。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要战役与事件</h4>
+                                    <ul>
+                                        <li><strong>1944年4月-12月</strong> - 豫湘桂战役（日军"一号作战"），日军打通大陆交通线</li>
+                                        <li><strong>1944年5月-8月</strong> - 滇西反攻，中国远征军收复腾冲、龙陵</li>
+                                        <li><strong>1944年6月-8月</strong> - 衡阳保卫战，方先觉率第10军坚守47天</li>
+                                        <li><strong>1944年9月-11月</strong> - 桂柳会战，桂林、柳州相继失守</li>
+                                        <li><strong>1945年1月27日</strong> - 中国远征军与驻印军在缅甸芒友会师</li>
+                                        <li><strong>1945年4月9日-6月7日</strong> - 湘西会战（雪峰山战役），日军最后一次大规模进攻失败</li>
+                                        <li><strong>1945年5月-7月</strong> - 八路军、新四军发动夏季攻势，收复大片国土</li>
+                                        <li><strong>1945年7月26日</strong> - 中美英三国发表《波茨坦公告》，敦促日本投降</li>
+                                        <li><strong>1945年8月6日、9日</strong> - 美国在广岛、长崎投下原子弹</li>
+                                        <li><strong>1945年8月8日</strong> - 苏联对日宣战，出兵东北</li>
+                                        <li><strong>1945年8月9日</strong> - 毛泽东发表《对日寇的最后一战》</li>
+                                        <li><strong>1945年8月10日-11日</strong> - 八路军、新四军展开全面反攻</li>
+                                        <li><strong>1945年8月14日</strong> - 日本天皇决定接受《波茨坦公告》</li>
+                                        <li><strong>1945年8月15日</strong> - 日本天皇发布《终战诏书》，宣布无条件投降</li>
+                                        <li><strong>1945年9月2日</strong> - 日本在东京湾密苏里号战舰上签署投降书</li>
+                                        <li><strong>1945年9月9日</strong> - 中国战区受降仪式在南京举行，冈村宁次向何应钦投降</li>
+                                        <li><strong>1945年10月25日</strong> - 台湾光复，回归祖国怀抱</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">何应钦</span>
+                                        <span class="figure-tag">薛岳</span>
+                                        <span class="figure-tag">王耀武</span>
+                                        <span class="figure-tag">方先觉</span>
+                                        <span class="figure-tag">卫立煌</span>
+                                        <span class="figure-tag">孙立人</span>
+                                        <span class="figure-tag">廖耀湘</span>
+                                        <span class="figure-tag">宋希濂</span>
+                                        <span class="figure-tag">冈村宁次</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>中国人民取得了近代以来第一次反侵略战争的完全胜利</li>
+                                        <li>中国成为联合国安理会常任理事国，国际地位显著提高</li>
+                                        <li>为新民主主义革命在全国的胜利奠定了基础</li>
+                                        <li>中华民族精神得到空前弘扬，民族凝聚力极大增强</li>
+                                        <li>台湾及澎湖列岛回归祖国，维护了国家领土完整</li>
+                                        <li>为世界反法西斯战争作出了巨大贡献和牺牲</li>
+                                        <li>改变了世界政治格局，促进了民族解放运动的发展</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 解放战争 - 细化时间轴 -->
+                <div class="timeline-item" data-period="civil">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1945-1946</div>
+                        <h3 class="timeline-title">和平谈判与战略防御</h3>
+                        <div class="timeline-description">
+                            <p>抗战胜利后国共两党围绕建国问题展开激烈斗争，从和平谈判走向全面内战，解放区军民在极其困难条件下粉碎国民党军的全面进攻。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要事件与谈判</h4>
+                                    <ul>
+                                        <li><strong>1945年8月14日、20日、23日</strong> - 蒋介石三次电邀毛泽东赴重庆谈判</li>
+                                        <li><strong>1945年8月28日</strong> - 毛泽东、周恩来、王若飞飞抵重庆，开始为期43天的谈判</li>
+                                        <li><strong>1945年9月10日-10月12日</strong> - 上党战役，晋冀鲁豫军区歼灭国民党军3.5万人</li>
+                                        <li><strong>1945年10月10日</strong> - 签订《政府与中共代表会谈纪要》（《双十协定》）</li>
+                                        <li><strong>1945年10月24日-11月2日</strong> - 邯郸战役（平汉战役），晋冀鲁豫军区歼敌4万余人</li>
+                                        <li><strong>1945年11月-12月</strong> - 山海关保卫战，东北民主联军阻击国民党军进入东北</li>
+                                        <li><strong>1946年1月10日</strong> - 国共签订停战协定，政治协商会议在重庆开幕</li>
+                                        <li><strong>1946年3月</strong> - 国民党六届二中全会推翻政协决议</li>
+                                        <li><strong>1946年4月18日-5月18日</strong> - 四平保卫战，东北民主联军坚守月余</li>
+                                        <li><strong>1946年6月26日</strong> - 国民党军大举进攻中原解放区，全面内战爆发</li>
+                                        <li><strong>1946年7月13日-8月27日</strong> - 苏中战役（七战七捷），华中野战军歼敌5.3万人</li>
+                                        <li><strong>1946年7月-9月</strong> - 定陶战役，晋冀鲁豫野战军歼敌1.7万人</li>
+                                        <li><strong>1946年9月16日</strong> - 中共中央军委发出《集中优势兵力，各个歼灭敌人》指示</li>
+                                        <li><strong>1946年10月-11月</strong> - 新开岭战役，东北民主联军全歼国民党军第25师</li>
+                                        <li><strong>1946年12月-1947年4月</strong> - 三下江南四保临江战役，东北民主联军扭转战局</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">毛泽东</span>
+                                        <span class="figure-tag">周恩来</span>
+                                        <span class="figure-tag">王若飞</span>
+                                        <span class="figure-tag">蒋介石</span>
+                                        <span class="figure-tag">李先念</span>
+                                        <span class="figure-tag">郑位三</span>
+                                        <span class="figure-tag">王树声</span>
+                                        <span class="figure-tag">粟裕</span>
+                                        <span class="figure-tag">谭震林</span>
+                                        <span class="figure-tag">刘伯承</span>
+                                        <span class="figure-tag">邓小平</span>
+                                        <span class="figure-tag">林彪</span>
+                                        <span class="figure-tag">罗荣桓</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>中国共产党通过重庆谈判在政治上赢得主动，揭露了国民党假和平真内战的阴谋</li>
+                                        <li>解放区军民以运动战为主要作战形式，粉碎了国民党军的全面进攻</li>
+                                        <li>积累了大规模运动战的经验，为战略反攻奠定了基础</li>
+                                        <li>东北民主联军"让开大路、占领两厢"，建立了巩固的东北根据地</li>
+                                        <li>人民解放军在战争中学习战争，军事指挥艺术不断提高</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-period="civil">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1947</div>
+                        <h3 class="timeline-title">战略反攻开始</h3>
+                        <div class="timeline-description">
+                            <p>解放军由战略防御转入战略进攻，三路大军挺进中原，千里跃进大别山，将战争引向国民党统治区，战争形势发生根本性转变。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要战役与战略行动</h4>
+                                    <ul>
+                                        <li><strong>1947年3月13日-19日</strong> - 延安保卫战，中共中央主动撤离延安</li>
+                                        <li><strong>1947年3月25日-5月4日</strong> - 青化砭、羊马河、蟠龙三战三捷，西北野战军歼敌1.4万人</li>
+                                        <li><strong>1947年4月-7月</strong> - 正太战役、青沧战役、保北战役，晋察冀野战军转入反攻</li>
+                                        <li><strong>1947年5月13日-16日</strong> - 孟良崮战役，华东野战军全歼国民党军"五大主力"之一的整编74师</li>
+                                        <li><strong>1947年6月30日</strong> - 刘伯承、邓小平率晋冀鲁豫野战军主力12万人强渡黄河，发起鲁西南战役</li>
+                                        <li><strong>1947年7月1日-28日</strong> - 鲁西南战役，歼敌9个半旅约6万人</li>
+                                        <li><strong>1947年8月7日</strong> - 刘邓大军开始千里跃进大别山，8月27日到达大别山区</li>
+                                        <li><strong>1947年8月22日</strong> - 陈赓、谢富治率太岳兵团8万人强渡黄河，挺进豫西</li>
+                                        <li><strong>1947年9月7日-9日</strong> - 沙土集战役，华东野战军外线兵团歼敌整编57师</li>
+                                        <li><strong>1947年9月26日</strong> - 陈毅、粟裕率华东野战军主力挺进豫皖苏边区</li>
+                                        <li><strong>1947年10月10日</strong> - 发布《中国人民解放军宣言》，提出"打倒蒋介石，解放全中国"的口号</li>
+                                        <li><strong>1947年11月6日-12日</strong> - 石家庄战役，解放军攻克第一个重要城市</li>
+                                        <li><strong>1947年12月25日-28日</strong> - 中共中央在陕北米脂县杨家沟召开会议，毛泽东作《目前形势和我们的任务》报告</li>
+                                        <li><strong>1947年12月13日-30日</strong> - 平汉、陇海路破击战，刘邓、陈粟大军协同作战</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">毛泽东</span>
+                                        <span class="figure-tag">周恩来</span>
+                                        <span class="figure-tag">任弼时</span>
+                                        <span class="figure-tag">彭德怀</span>
+                                        <span class="figure-tag">刘伯承</span>
+                                        <span class="figure-tag">邓小平</span>
+                                        <span class="figure-tag">陈毅</span>
+                                        <span class="figure-tag">粟裕</span>
+                                        <span class="figure-tag">陈赓</span>
+                                        <span class="figure-tag">谢富治</span>
+                                        <span class="figure-tag">聂荣臻</span>
+                                        <span class="figure-tag">徐向前</span>
+                                        <span class="figure-tag">张云逸</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>人民解放军由战略防御转入战略进攻，这是解放战争的伟大转折点</li>
+                                        <li>三路大军挺进中原，将战争引向国民党统治区，打乱了敌人的战略部署</li>
+                                        <li>千里跃进大别山，像一把尖刀插入敌人心脏，威胁南京、武汉等战略要地</li>
+                                        <li>石家庄战役的胜利，为攻克大城市提供了宝贵经验</li>
+                                        <li>《中国人民解放军宣言》的发表，标志着中国革命进入新的历史阶段</li>
+                                        <li>中共中央十二月会议为夺取全国胜利制定了政治、军事、经济纲领</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-period="civil">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1948</div>
+                        <h3 class="timeline-title">战略决战准备</h3>
+                        <div class="timeline-description">
+                            <p>解放军在各大战场展开大规模攻势作战，攻克重要城市，歼灭国民党军重兵集团，为战略决战创造有利条件。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要战役与战略行动</h4>
+                                    <ul>
+                                        <li><strong>1948年2月24日-3月3日</strong> - 宜川战役（瓦子街战役），西北野战军歼敌整编第29军2.9万人，击毙军长刘戡</li>
+                                        <li><strong>1948年3月7日-14日</strong> - 洛阳战役，华东野战军陈唐兵团攻克洛阳，歼敌2万余人</li>
+                                        <li><strong>1948年3月11日-21日</strong> - 临汾战役，晋冀鲁豫军区部队攻克临汾，歼敌2.5万人</li>
+                                        <li><strong>1948年4月22日</strong> - 西北野战军收复延安，中共中央机关重返陕北</li>
+                                        <li><strong>1948年4月27日</strong> - 潍县战役，山东兵团攻克潍县，歼敌4.6万人</li>
+                                        <li><strong>1948年5月9日</strong> - 中共中央决定将晋冀鲁豫与晋察冀解放区合并为华北解放区</li>
+                                        <li><strong>1948年5月17日</strong> - 临汾战役结束，晋冀鲁豫军区部队全歼守敌</li>
+                                        <li><strong>1948年6月17日-22日</strong> - 开封战役，华东野战军攻克河南省会开封，歼敌3.9万人</li>
+                                        <li><strong>1948年6月27日-7月6日</strong> - 豫东战役（睢杞战役），华东野战军歼敌9万余人</li>
+                                        <li><strong>1948年7月2日-16日</strong> - 襄樊战役，中原野战军攻克襄阳、樊城，歼敌2.1万人</li>
+                                        <li><strong>1948年9月16日-24日</strong> - 济南战役，华东野战军攻克济南，歼敌10.4万人</li>
+                                        <li><strong>1948年9月12日</strong> - 东北野战军发起辽沈战役，战略决战拉开序幕</li>
+                                        <li><strong>1948年9月30日</strong> - 中共中央发出《关于召开党的各级代表大会和代表会议的决议》</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">彭德怀</span>
+                                        <span class="figure-tag">林彪</span>
+                                        <span class="figure-tag">罗荣桓</span>
+                                        <span class="figure-tag">许世友</span>
+                                        <span class="figure-tag">谭震林</span>
+                                        <span class="figure-tag">粟裕</span>
+                                        <span class="figure-tag">陈士榘</span>
+                                        <span class="figure-tag">唐亮</span>
+                                        <span class="figure-tag">徐向前</span>
+                                        <span class="figure-tag">刘伯承</span>
+                                        <span class="figure-tag">邓小平</span>
+                                        <span class="figure-tag">陈毅</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>解放军转入大规模城市攻坚战，攻克了洛阳、开封、济南等重要城市</li>
+                                        <li>积累了大规模城市攻坚战的经验，为战略决战奠定了基础</li>
+                                        <li>济南战役的胜利，标志着解放军具备了攻克国民党军重兵设防大城市的作战能力</li>
+                                        <li>豫东战役是解放军首次在中原地区进行的大规模歼灭战，改变了中原战局</li>
+                                        <li>宜川战役的胜利，使西北野战军由内线防御转入外线进攻</li>
+                                        <li>为即将展开的辽沈、淮海、平津三大战役创造了有利条件</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-period="civil">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1948-1949</div>
+                        <h3 class="timeline-title">三大战役与渡江战役</h3>
+                        <div class="timeline-description">
+                            <p>辽沈、淮海、平津三大战役基本消灭国民党军主力，渡江战役解放南京、上海等战略要地，国民党统治土崩瓦解。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>三大战役</h4>
+                                    <ul>
+                                        <li><strong>1948年9月12日-11月2日</strong> - 辽沈战役：东北野战军攻克锦州、长春、沈阳，歼敌47.2万人，解放东北全境</li>
+                                        <li><strong>1948年11月6日-1949年1月10日</strong> - 淮海战役：华东、中原野战军协同作战，歼敌55.5万人，解放长江以北华东中原地区</li>
+                                        <li><strong>1948年11月29日-1949年1月31日</strong> - 平津战役：东北、华北野战军攻克天津，和平解放北平，歼敌52万人</li>
+                                    </ul>
+                                    <h4>重要战役与事件</h4>
+                                    <ul>
+                                        <li><strong>1949年1月10日</strong> - 淮海战役结束，中共中央军委决定全军统一整编</li>
+                                        <li><strong>1949年1月21日</strong> - 蒋介石宣布"引退"，李宗仁代理总统</li>
+                                        <li><strong>1949年1月31日</strong> - 北平和平解放，傅作义率部接受改编</li>
+                                        <li><strong>1949年3月5日-13日</strong> - 中共七届二中全会在西柏坡召开</li>
+                                        <li><strong>1949年3月25日</strong> - 中共中央机关由西柏坡迁往北平</li>
+                                        <li><strong>1949年4月1日-20日</strong> - 国共北平和谈，讨论《国内和平协定》</li>
+                                        <li><strong>1949年4月20日</strong> - 国民党拒绝在《国内和平协定》上签字</li>
+                                        <li><strong>1949年4月21日</strong> - 毛泽东、朱德发布《向全国进军的命令》</li>
+                                        <li><strong>1949年4月20日-6月2日</strong> - 渡江战役：第二、第三野战军强渡长江，解放南京、上海、武汉等城市</li>
+                                        <li><strong>1949年4月23日</strong> - 解放南京，国民党统治覆灭</li>
+                                        <li><strong>1949年5月12日-27日</strong> - 上海战役，第三野战军攻克上海</li>
+                                        <li><strong>1949年5月27日</strong> - 解放上海，完整接管中国最大城市</li>
+                                        <li><strong>1949年5月16日-17日</strong> - 解放武汉三镇</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">林彪</span>
+                                        <span class="figure-tag">罗荣桓</span>
+                                        <span class="figure-tag">刘亚楼</span>
+                                        <span class="figure-tag">刘伯承</span>
+                                        <span class="figure-tag">陈毅</span>
+                                        <span class="figure-tag">邓小平</span>
+                                        <span class="figure-tag">粟裕</span>
+                                        <span class="figure-tag">谭震林</span>
+                                        <span class="figure-tag">聂荣臻</span>
+                                        <span class="figure-tag">徐向前</span>
+                                        <span class="figure-tag">傅作义</span>
+                                        <span class="figure-tag">邓宝珊</span>
+                                        <span class="figure-tag">陈赓</span>
+                                        <span class="figure-tag">叶剑英</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>三大战役共歼敌154万余人，基本消灭了国民党军主力</li>
+                                        <li>辽沈战役的胜利使解放军在数量上首次超过国民党军</li>
+                                        <li>淮海战役是解放战争中规模最大、歼敌最多的一次战役</li>
+                                        <li>平津战役的胜利使千年古都北平免遭战火破坏</li>
+                                        <li>渡江战役的胜利标志着国民党22年统治的终结</li>
+                                        <li>为建立新中国奠定了坚实的军事基础</li>
+                                        <li>展现了中国共产党高超的军事指挥艺术和战略眼光</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-period="civil">
+                    <div class="timeline-marker">
+                        <div class="marker-circle"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1949</div>
+                        <h3 class="timeline-title">全国解放与新中国成立</h3>
+                        <div class="timeline-description">
+                            <p>解放军向全国进军，扫清国民党残余势力，中国人民政治协商会议召开，中华人民共和国宣告成立，标志着新民主主义革命的伟大胜利。</p>
+                            <div class="timeline-details">
+                                <div class="key-events">
+                                    <h4>重要战役与事件</h4>
+                                    <ul>
+                                        <li><strong>1949年4月25日</strong> - 发布《中国人民解放军布告》（约法八章）</li>
+                                        <li><strong>1949年5月20日</strong> - 解放西安，第一野战军进军西北</li>
+                                        <li><strong>1949年5月22日</strong> - 解放南昌，第二野战军进军西南</li>
+                                        <li><strong>1949年6月15日-19日</strong> - 新政治协商会议筹备会第一次全体会议在北平召开</li>
+                                        <li><strong>1949年7月6日-16日</strong> - 扶眉战役，第一野战军歼敌4.3万人，解放关中地区</li>
+                                        <li><strong>1949年7月11日-14日</strong> - 宜沙战役，第四野战军解放宜昌、沙市</li>
+                                        <li><strong>1949年7月17日-8月16日</strong> - 长山列岛战役，解放山东沿海岛屿</li>
+                                        <li><strong>1949年8月4日</strong> - 程潜、陈明仁在长沙起义，湖南和平解放</li>
+                                        <li><strong>1949年8月12日-10月20日</strong> - 兰州战役，第一野战军攻克兰州，歼敌2.7万人</li>
+                                        <li><strong>1949年8月17日</strong> - 解放福州，第三野战军进军福建</li>
+                                        <li><strong>1949年9月5日</strong> - 解放西宁，马步芳集团覆灭</li>
+                                        <li><strong>1949年9月19日</strong> - 董其武在绥远起义，绥远和平解放</li>
+                                        <li><strong>9月23日</strong> - 解放银川，宁夏战役结束</li>
+                                        <li><strong>1949年9月21-30日</strong> - 中国人民政治协商会议第一届全体会议在北平召开</li>
+                                        <li><strong>1949年9月25日、26日</strong> - 陶峙岳、包尔汉在新疆起义，新疆和平解放</li>
+                                        <li><strong>1949年9月27日</strong> - 通过《中国人民政治协商会议组织法》《中华人民共和国中央人民政府组织法》</li>
+                                        <li><strong>1949年9月29日</strong> - 通过《中国人民政治协商会议共同纲领》</li>
+                                        <li><strong>1949年9月30日</strong> - 选举中央人民政府委员会，毛泽东当选主席</li>
+                                        <li><strong>1949年10月1日</strong> - 中华人民共和国开国大典，毛泽东在天安门城楼宣告新中国成立</li>
+                                        <li><strong>1949年10月2日</strong> - 苏联第一个承认中华人民共和国</li>
+                                        <li><strong>1949年10月7日</strong> - 解放韶关，第四野战军进军广东</li>
+                                        <li><strong>1949年10月14日</strong> - 解放广州，国民党政府迁往重庆</li>
+                                        <li><strong>1949年10月17日</strong> - 解放厦门</li>
+                                        <li><strong>1949年10月24日-27日</strong> - 金门战役，解放军登陆金门受挫</li>
+                                        <li><strong>1949年11月1日</strong> - 西南战役开始，第二野战军进军大西南</li>
+                                        <li><strong>1949年11月15日</strong> - 解放贵阳</li>
+                                        <li><strong>1949年11月22日</strong> - 解放桂林</li>
+                                        <li><strong>1949年11月30日</strong> - 解放重庆，国民党政府迁往成都</li>
+                                        <li><strong>1949年12月4日</strong> - 解放南宁</li>
+                                        <li><strong>1949年12月9日</strong> - 卢汉在昆明起义，刘文辉、邓锡侯、潘文华在四川起义</li>
+                                        <li><strong>1949年12月10日</strong> - 蒋介石从成都飞往台湾</li>
+                                        <li><strong>1949年12月27日</strong> - 解放成都，西南战役基本结束</li>
+                                        <li><strong>1949年12月31日</strong> - 中共中央发表《告前线将士和全国同胞书》，宣布解放战争基本胜利</li>
+                                    </ul>
+                                </div>
+                                <div class="key-figures">
+                                    <h4>关键人物</h4>
+                                    <div class="figures-list">
+                                        <span class="figure-tag">毛泽东</span>
+                                        <span class="figure-tag">朱德</span>
+                                        <span class="figure-tag">刘少奇</span>
+                                        <span class="figure-tag">周恩来</span>
+                                        <span class="figure-tag">任弼时</span>
+                                        <span class="figure-tag">彭德怀</span>
+                                        <span class="figure-tag">刘伯承</span>
+                                        <span class="figure-tag">邓小平</span>
+                                        <span class="figure-tag">贺龙</span>
+                                        <span class="figure-tag">陈毅</span>
+                                        <span class="figure-tag">林彪</span>
+                                        <span class="figure-tag">罗荣桓</span>
+                                        <span class="figure-tag">聂荣臻</span>
+                                        <span class="figure-tag">徐向前</span>
+                                        <span class="figure-tag">叶剑英</span>
+                                        <span class="figure-tag">程潜</span>
+                                        <span class="figure-tag">陈明仁</span>
+                                        <span class="figure-tag">董其武</span>
+                                        <span class="figure-tag">陶峙岳</span>
+                                        <span class="figure-tag">包尔汉</span>
+                                        <span class="figure-tag">卢汉</span>
+                                        <span class="figure-tag">刘文辉</span>
+                                        <span class="figure-tag">邓锡侯</span>
+                                        <span class="figure-tag">潘文华</span>
+                                    </div>
+                                </div>
+                                <div class="historical-impact">
+                                    <h4>历史意义</h4>
+                                    <ul>
+                                        <li>推翻了帝国主义、封建主义、官僚资本主义三座大山，结束了中国半殖民地半封建社会的历史</li>
+                                        <li>建立了人民民主专政的中华人民共和国，实现了国家独立和民族解放</li>
+                                        <li>中国人民从此站立起来，成为国家和社会的主人</li>
+                                        <li>开启了中国历史的新纪元，为社会主义革命和建设奠定了基础</li>
+                                        <li>改变了世界政治格局，壮大了世界和平民主和社会主义力量</li>
+                                        <li>中国共产党成为执政党，领导中国人民走上社会主义道路</li>
+                                        <li>确立了人民代表大会制度、中国共产党领导的多党合作和政治协商制度</li>
+                                        <li>为中华民族伟大复兴创造了根本政治前提和制度基础</li>
+                                        <li>中国革命的胜利是马克思列宁主义在中国的伟大胜利，是毛泽东思想的伟大胜利</li>
+                                        <li>为被压迫民族和被压迫人民争取解放的斗争提供了宝贵经验</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 知识图谱区域 -->
+    <section id="knowledge" class="knowledge-section">
+        <div class="container">
+            <h2 class="section-title">革命历史知识图谱</h2>
+            <p class="section-subtitle">探索历史事件与人物之间的复杂联系</p>
+            
+            <div class="graph-controls">
+                <button id="resetGraph" class="graph-btn">重置视图</button>
+                <button id="expandAll" class="graph-btn">展开全部</button>
+                <button onclick="window.open('knowledge_graph.html', '_blank')" class="graph-btn">打开知识图谱页面</button>
+            </div>
+            
+            <div id="knowledgeGraph" class="knowledge-graph">
+                <svg id="graphSvg" width="100%" height="600"></svg>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 趣味测验区域 -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">革命历史知识测验</h2>
+            <p class="section-subtitle">检验您对中国革命历史的了解程度</p>
+            
+            <div class="quiz-container">
+                <!-- 测验开始界面 -->
+                <div id="quizStart" class="quiz-start">
+                    <div class="quiz-intro">
+                        <h3>欢迎参加革命历史知识测验</h3>
+                        <p>本测验包含10道选择题，涵盖1840-1949年中国革命历史的重要事件和人物。</p>
+                        <ul class="quiz-rules">
+                            <li>每题10分，满分100分</li>
+                            <li>选择最符合历史事实的答案</li>
+                            <li>完成后可查看得分和解析</li>
+                        </ul>
+                        <button id="startQuiz" class="btn-primary">开始测验</button>
+                    </div>
+                </div>
+                
+                <!-- 测验问题界面 -->
+                <div id="quizQuestions" class="quiz-questions" style="display: none;">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                        <div class="progress-text">
+                            第 <span id="currentQuestion">1</span> 题 / 共 10 题
+                        </div>
+                    </div>
+                    
+                    <div id="questionContainer" class="question-container">
+                        <!-- 问题将通过JavaScript动态生成 -->
+                    </div>
+                    
+                    <div class="quiz-navigation">
+                        <button id="prevQuestion" class="btn-secondary" disabled>上一题</button>
+                        <button id="nextQuestion" class="btn-primary">下一题</button>
+                    </div>
+                </div>
+                
+                <!-- 测验结果界面 -->
+                <div id="quizResult" class="quiz-result" style="display: none;">
+                    <div class="result-content">
+                        <h3>测验完成！</h3>
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span id="finalScore">0</span>
+                                <small>分</small>
+                            </div>
+                        </div>
+                        <p id="resultMessage" class="result-message"></p>
+                        <div class="result-actions">
+                            <button id="retryQuiz" class="btn-primary">重新测验</button>
+                            <button id="reviewAnswers" class="btn-secondary">查看解析</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>中国革命历史知识网页</h3>
+                    <p>大学期末作业项目 · 探索1840-1949年中国革命历史</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#timeline">时间轴</a>
+                    <a href="#knowledge">知识图谱</a>
+                    <a href="#quiz">趣味测验</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 中国革命历史知识网页 · 仅供学习使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript文件 -->
+    <script src="data.js"></script>
+    <script src="compatibility.js"></script>
+    <script src="main.js"></script>
+
+    <!-- 全局滚动函数 -->
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const headerHeight = document.querySelector('.site-header').offsetHeight;
+                const targetPosition = element.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+</body>
+</html>
