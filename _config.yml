@@ -1,0 +1,27 @@
+# GitHub Pages 配置
+title: "中国革命历史时间轴"
+description: "抗日战争和解放战争详细时间轴与知识图谱"
+baseurl: ""
+url: ""
+theme: jekyll-theme-cayman
+
+# 构建设置
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# 排除文件
+exclude:
+  - README.md
+  - DEPLOYMENT.md
+  - .github/
+  - node_modules/
+  - package.json
+  - package-lock.json
+
+# 包含文件
+include:
+  - "*.html"
+  - "*.css"
+  - "*.js"
+  - "*.json"
